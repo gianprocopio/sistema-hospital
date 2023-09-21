@@ -1,6 +1,6 @@
 package models;
 
-public class User {
+public abstract class User {
 	private int id;
 	private String name;
 	private String email;
@@ -60,6 +60,7 @@ public class User {
 				getPhoneNumber();
 	}
 	
+	public abstract void showDataUser();
 	
 	
 }

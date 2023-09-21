@@ -37,6 +37,12 @@ public class Doctor extends User{
 				+ "\n\n::Available Appointments::\n" + availableAppointments.toString();
 	}
 	
+	@Override
+	public void showDataUser() {
+		System.out.println("Hospital: Hospital Italiano");
+		System.out.println("Department: " + this.speciality);
+	}
+	
 	
 	//Register an appointment
 	public static class AvailableAppointment{
@@ -81,8 +87,8 @@ public class Doctor extends User{
 		}
 		
 		
-		
 	}
+
 	
 	
 
