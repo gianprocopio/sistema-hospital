@@ -1,23 +1,18 @@
-package com.gianproco.models;
+package models;
 
-public class Patient {
+public class User {
 	private int id;
 	private String name;
 	private String email;
 	private String address;
 	private String phoneNumber;
-	private String birthday;
-	private double weight;
-	private double height;
-	private String blood;
 	
-	public Patient(String name, String email) {
+	public User(String name, String email) {
 		super();
 		this.name = name;
 		this.email = email;
 	}
 
-	
 	public int getId() {
 		return id;
 	}
@@ -25,7 +20,7 @@ public class Patient {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -57,39 +52,14 @@ public class Patient {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-
-	public String getBirthday() {
-		return birthday;
+	
+	@Override
+	public String toString() {
+		return "User: " + getName() + "\nEmail: " + getEmail() +
+				"\nAddress: " + getAddress() + "\nPhone: " + 
+				getPhoneNumber();
 	}
-
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
-
-	public double getWeight() {
-		return weight;
-	}
-
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
-
-	public double getHeight() {
-		return height;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
-	}
-
-	public String getBlood() {
-		return blood;
-	}
-
-	public void setBlood(String blood) {
-		this.blood = blood;
-	}
-		
+	
 	
 	
 }

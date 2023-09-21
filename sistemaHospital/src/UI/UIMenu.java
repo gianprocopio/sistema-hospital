@@ -1,4 +1,4 @@
-package com.gianproco.ui;
+package UI;
 
 import java.util.Scanner;
 

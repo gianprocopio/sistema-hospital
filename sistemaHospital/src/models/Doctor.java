@@ -1,45 +1,18 @@
-package com.gianproco.models;
+package models;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-	private int id;
-	private String name;
-	private String email;
+public class Doctor extends User{
+	
 	private String speciality;
 	
 					
-	public Doctor(String name, String speciality) {
-		super();
-		this.name = name;
+	public Doctor(String name, String speciality, String email) {
+		super(name, email);
 		this.speciality = speciality;
 	}
 	
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
 	public String getSpeciality() {
 		return speciality;
@@ -58,9 +31,16 @@ public class Doctor {
 		return availableAppointments;
 	}
 	
+	@Override
+	public String toString() {
+		return super.toString() + "\nSpeciality: " + getSpeciality()
+				+ "\n\n::Available Appointments::\n" + availableAppointments.toString();
+	}
+	
 	
 	//Register an appointment
 	public static class AvailableAppointment{
+		
 		private int id_availableAppointment;
 		private Date date;
 		private String time;
@@ -93,6 +73,11 @@ public class Doctor {
 
 		public void setTime(String time) {
 			this.time = time;
+		}
+		
+		@Override
+		public String toString() {
+			return "Date: " + getDate() + "| Time: " + getTime() + "\n";
 		}
 		
 		
