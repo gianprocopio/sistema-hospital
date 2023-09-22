@@ -8,7 +8,7 @@ import models.Patient;
 
 public class UIMenu {
 	
-	public static String[] MONTHS = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+	public static final String[] MONTHS = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 	public static Doctor doctorLogged;
 	public static Patient patientLogged;
 	
@@ -32,7 +32,7 @@ public class UIMenu {
 				case 1:
 					response = 0;
 					authUser(1);
-					showDoctorMenu();
+					UIDoctorMenu.showDoctorMenu();
 					break;
 				case 2:
 					response = 0;
@@ -77,7 +77,7 @@ public class UIMenu {
 						//Get user logged:
 						doctorLogged = doctor;
 						//Show doctor menu
-						showDoctorMenu();
+						UIDoctorMenu.showDoctorMenu();
 					}
 				}
 			}
@@ -129,39 +129,6 @@ public class UIMenu {
 			}while(response !=0);
 		}
 		
-	public static void showDoctorMenu() {
-			int response = 0;
-			
-			do {
-				System.out.println("\n--------------------------");
-				System.out.println("::Doctor::");
-				System.out.println("1. My patients");
-				System.out.println("2. My shifts");
-				System.out.println("0. Return");
-				System.out.println("--------------------------");
-				
-				Scanner sc = new Scanner(System.in);
-				response = Integer.valueOf(sc.nextLine());
-							
-				switch(response) {
-					case 1: 
-						response = 0;
-						showDoctorPatientsMenu();
-						break;
-					case 2:
-						response = 0;
-						showDoctorShiftsMenu();
-						break;
-					case 3:
-						response = 0;
-						showMenu();
-						break;
-					default:
-						System.out.println("Please select a correct option.");
-				}
-			}while(response !=0);
-			
-		}
 	
 	static void showDoctorShiftsMenu() {
 		System.out.println("::My Shifts::");
