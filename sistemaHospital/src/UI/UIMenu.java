@@ -50,7 +50,7 @@ public class UIMenu {
 		
 	}
 	
-	private static authUser(int userType) {
+	private static void authUser(int userType) {
 		// userType == 1 --> Doctor
 		// userType == 2 --> Patient
 		
@@ -97,38 +97,7 @@ public class UIMenu {
 	
 	
 	
-	public static void showPatientMenu() {
-			int response = 0;
-			do {
-				System.out.println("\n--------------------------");
-				System.out.println("::Patient::");
-				System.out.println("1. Book an appointment");
-				System.out.println("2. My appointments");
-				System.out.println("0. Return");
-				System.out.println("\n--------------------------");
-				System.out.print("Choose an option: ");
-				Scanner sc = new Scanner(System.in);
-				response = Integer.valueOf(sc.nextLine());
-				
-				switch(response) {
-					case 1:
-						response = 0;
-						bookAppointment();
-						break;
-					case 2: 
-						response = 0;
-						System.out.println("::My appointments::");
-						break;
-					case 0:
-						showMenu();
-						break;
-					default:
-						System.out.println("Please select a correct option");
-				}
-				
-			}while(response !=0);
-		}
-		
+			
 	
 	static void showDoctorShiftsMenu() {
 		System.out.println("::My Shifts::");

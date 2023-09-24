@@ -35,7 +35,8 @@ public class UIDoctorMenu {
 					break;
 				case 3:
 					response = 0;
-					
+					break;
+				case 0:
 					break;
 				default:
 					System.out.println("Please select a correct option.");
@@ -62,9 +63,9 @@ public class UIDoctorMenu {
 				
 				if(response > 0 && response < 4) {
 					int monthSelected = response;
-					System.out.println(monthSelected + ". " + UIMenu.MONTHS[monthSelected]);
+					System.out.println(monthSelected + ". " + UIMenu.MONTHS[monthSelected - 1]);
 					
-					System.out.print("Insert the date available: [dd/mm/yyyy]");
+					System.out.print("Insert the date available: [dd/mm/yyyy] --> ");
 					String date = sc.nextLine();
 					
 					System.out.println("Your date is: " + date + "\n1. Correct \n2. Change Date");
@@ -76,7 +77,7 @@ public class UIDoctorMenu {
 					int responseTime = 0;
 					String time = "";
 					do {
-						System.out.println("Insert the time available for date: " + date + " [hh:mm");
+						System.out.println("Insert the time available for date: " + date + " [hh:mm] -->");
 						time = sc.nextLine();
 						
 						System.out.println("Your time is: " + time + "\n1. Correct\n2. Change Time");
