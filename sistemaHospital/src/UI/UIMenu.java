@@ -37,7 +37,7 @@ public class UIMenu {
 				case 2:
 					response = 0;
 					authUser(2);
-					showPatientMenu();
+					UIPatientMenu.showPatientMenu();;
 					break;
 				case 0:
 					System.out.println("Thank you for coming!");
@@ -86,7 +86,7 @@ public class UIMenu {
 					if(patient.getEmail().equals(email)) {
 						emailCorrect = true;
 						patientLogged = patient;
-						showPatientMenu();
+						UIPatientMenu.showPatientMenu();;
 					}
 				}
 			}

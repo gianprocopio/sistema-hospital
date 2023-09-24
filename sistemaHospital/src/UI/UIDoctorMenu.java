@@ -31,12 +31,12 @@ public class UIDoctorMenu {
 					break;
 				case 2:
 					response = 0;
-					
 					break;
 				case 3:
 					response = 0;
 					break;
 				case 0:
+					UIMenu.showMenu();
 					break;
 				default:
 					System.out.println("Please select a correct option.");
